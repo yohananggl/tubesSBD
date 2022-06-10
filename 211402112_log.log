@@ -1,0 +1,51 @@
+MariaDB [(none)]> CREATE DATABASE db211402112;
+Query OK, 1 row affected (0.01 sec)
+
+MariaDB [(none)]> USE db211402112;
+Database changed
+MariaDB [db211402112]> SHOW tables;
+Empty set (0.00 sec)
+
+MariaDB [db211402112]> CREATE TABLE TaskId
+    -> ;
+ERROR 1113 (42000): A table must have at least 1 column
+MariaDB [db211402112]> CREATE TABLE 211402112
+    -> TaskId varchar(37) Primary Key,
+    -> NamaTask varchar(255)
+    -> Status ENUM,
+    -> KategoriIndikator varchar(255),
+    -> Kategori varchar(255),
+    -> Indikator varchar(255),
+    -> CreatorId varchar(255),
+    -> CreatorName varchar(255),
+    -> Prioritas varchar(10)
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '211402112
+TaskId varchar(37) Primary Key,
+NamaTask varchar(255)
+Status ENUM,
+Kat' at line 1
+MariaDB [(none)]> SHOW DATABASES;
++--------------------+
+| Database           |
++--------------------+
+| bazmi              |
+| db211402112        |
+| ecomm              |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| pwl                |
+| test               |
++--------------------+
+9 rows in set (0.10 sec)
+
+MariaDB [(none)]> CREATE DATABASE 211402112;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '211402112' at line 1
+MariaDB [(none)]> CREATE DATABASE db211402112;
+ERROR 1007 (HY000): Can't create database 'db211402112'; database exists
+MariaDB [(none)]> USE db 211402112;
+ERROR 1049 (42000): Unknown database 'db'
+MariaDB [(none)]> USE db211402112;
+Database changed
